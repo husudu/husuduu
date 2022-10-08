@@ -101,7 +101,7 @@ async def husu(bot, msg):
     start_time = time()
     if os.path.isdir("./brenduserbot/"):
         rm_r("./brenduserbot/")
-    repo = Repo.clone_from("https://github.com/brendsupport/brenduserbot", "./brenduserbot/", branch="master")
+    repo = Repo._clone("https://github.com/brendsupport/brenduserbot", "./brenduserbot/", branch="master")
     app = heroku_conn.apps()[appname]
     giturl = app.git_url.replace("https://", "https://api:" + api + "@")
     if "heroku" in repo.remotes:
